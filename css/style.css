@@ -1,0 +1,283 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #14756b2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "karla";
+}
+
+.page {
+    background-color: #fcfcfc;
+    padding: 30px;
+    width: 580px;
+    border: 1px solid #f7f7f7;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.068);
+    border-radius: 15px;
+    margin: 15px ;
+}
+@media (max-width: 767px) {
+    .page{
+        width: 310px;
+        margin-top: 150px;
+    }
+}
+.page h1 {
+    margin-bottom: 25px;
+    color: #072522;
+}
+
+.page label {
+    color: #041110;
+}
+
+/* strat name sec */
+.page .name-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page .name-input label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.page label span {
+    color: #14756c;
+}
+
+.page .name-input input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #14756c;
+    border-radius: 6px;
+}
+
+@media (max-width: 767px) {
+    .page .name-input {
+        display: block;
+    }
+
+    .page .name-input .name:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .page .name-input input {
+        width: 100%;
+    }
+
+}
+
+.page .name-input input:focus {
+    outline: none;
+}
+
+/* end name sec */
+
+/* start email sec */
+.page .email-input {
+    margin-top: 25px;
+}
+
+.page .email-input label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.page .email-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #14756c;
+    border-radius: 6px;
+}
+
+.page .email-input input:focus {
+    outline: none;
+}
+
+/* end email sec */
+/* start type sec */
+.page .type-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.page .type-input>label {
+    display: block;
+    width: 100%;
+    height: 200%;
+    margin-bottom: 15px;
+}
+
+.page .type-input .type {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #14756c;
+    border-radius: 6px;
+    width: 250px;
+    position: relative;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .page .type-input {
+        display: block;
+    }
+
+    .page .type-input .type {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+.page .type-input .type input {
+    appearance: none;
+}
+
+.page .type-input .type label {
+    padding-left: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.page .type-input .type label::before {
+    position: absolute;
+    content: "";
+    left: 22px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #9b9b9b;
+    border-radius: 50%;
+}
+
+.page .type-input .type label::after {
+    position: absolute;
+    content: "";
+    left: 25px;
+    top: 13px;
+    width: 12px;
+    height: 12px;
+    background-color: #14756c;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: .3s;
+}
+
+.page .type-input .type input:checked+label::before {
+    border-color: #14756c;
+}
+
+.page .type-input .type input:checked+label::after {
+    transform: scale(1);
+}
+
+.page .type-input .type:hover {
+    background-color: #156b624f;
+}
+
+/* end type sec */
+/* start message */
+.message-ear {
+    margin-top: 25px;
+}
+
+.message-ear label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.message-ear textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border-radius: 6px;
+    border: 1px solid #14756c;
+    padding: 10px;
+}
+
+.message-ear textarea:focus {
+    outline: none;
+}
+
+/* end message */
+/* start check */
+.check {
+    margin-top: 25px;
+    position: relative;
+}
+
+.check input {
+    appearance: none;
+}
+
+.check label {
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.check label::before {
+    position: absolute;
+    content: "";
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #9b9b9b;
+    border-radius: 2px;
+}
+
+.check label::after {
+    position: absolute;
+    content: "\f00c";
+    font-family: "font awesome 6 free";
+    font-weight: 900;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 5px;
+    width: 16px;
+    height: 16px;
+    background-color: #14756c;
+    color: #fff;
+    top: 0;
+    transform: scale(0) rotate(360deg);
+    transition: .3s;
+}
+
+.check input:checked+label::after {
+    transform: scale(1);
+}
+
+.check:hover label::before {
+    border-color: #14756c;
+}
+
+/* end check */
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    color: #fff;
+    background-color: #14756c;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0f524b;
+}

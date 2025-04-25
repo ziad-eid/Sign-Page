@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Tektur:wght@400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <form action="">
+        <div class="page">
+            <h1>Contact Us</h1>
+            <!-- start name -->
+            <div class="name-input">
+
+                <div class="name">
+                    <label for="first">First Name <span>*</span></label>
+                    <input type="text" id="first" required>
+                </div>
+
+                <div class="name">
+                    <label for="last">Last Name <span>*</span></label>
+                    <input type="text" id="last" required>
+                </div>
+
+            </div>
+            <!-- end name -->
+            <!-- start email -->
+            <div class="email-input">
+                <label for="mail">Email Address <span>*</span></label>
+                <input type="email" name="mail" id="mail" required>
+            </div>
+            <!-- end email -->
+            <!-- start type -->
+            <div class="type-input">
+                <label>Query Type <span>*</span></label>
+
+                <div class="type">
+                    <input type="radio" name="type" id="type1" required>
+                    <label for="type1">General Enqyiry</label>
+                </div>
+
+                <div class="type">
+                    <input type="radio" name="type" id="type2" required>
+                    <label for="type2">Support Request</label>
+                </div>
+            </div>
+            <!-- end type -->
+            <!-- start message -->
+            <div class="message-ear">
+                <label for="mess">Message <span>*</span></label>
+                <textarea name="message" id="mess" required></textarea>
+            </div>
+            <!-- end message -->
+            <!-- start check -->
+            <div class="check">
+                <input type="checkbox" id="check" required>
+                <label for="check">I consent to being contacted by the team</label>
+            </div>
+            <!-- end check -->
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+
+</html>
